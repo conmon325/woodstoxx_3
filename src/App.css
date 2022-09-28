@@ -35,12 +35,12 @@ body {
 }
 
 nav {
-    height: 10vh;
+    height: 15vh;
 }
 
 main {
-    width: 100%;
-    margin-top: 10vh;
+    width: 75%;
+    margin-top: 20vh;
     scroll-snap-type: y mandatory;
 
     /* padding: 3em 1em; */
@@ -157,6 +157,11 @@ a:hover {
 }
 
 .showcase {
+    width: 250px;
+    height: auto;
+}
+
+.philly {
     width: 250px;
     height: auto;
 }

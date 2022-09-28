@@ -1,4 +1,4 @@
-# Rowdy Goat Social Club
+# Rowdy Goat Social Club 
 
 ## Technology Stack & Tools
 
