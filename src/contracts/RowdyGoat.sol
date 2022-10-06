@@ -1484,7 +1484,7 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
       allowList[_minter] = true;
     }
 
-    function mint(uint256 _mintAmount) public isAllowed payable {
+    function mint(uint256 _mintAmount) public payable {
 
         // msg.sender has to be added to the allow list by the owner
         require(allowList[msg.sender] == true, "not allowed");
