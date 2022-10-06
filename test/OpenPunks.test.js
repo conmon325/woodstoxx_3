@@ -1,4 +1,4 @@
-const OpenPunks = artifacts.require("./OpenPunks")
+const RowdyGoat = artifacts.require("./RowdyGoat")
 
 require('chai')
     .use(require('chai-as-promised'))
@@ -27,7 +27,7 @@ contract('OpenPunks', ([deployer, user]) => {
         beforeEach(async () => {
             const NFT_MINT_DATE = (Date.now() + milliseconds).toString().slice(0, 10)
 
-            openPunks = await OpenPunks.new(
+            openPunks = await RowdyGoat.new(
                 NAME,
                 SYMBOL,
                 COST,
