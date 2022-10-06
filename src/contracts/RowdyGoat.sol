@@ -1442,6 +1442,8 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
     address public artist;
     uint256 public royalityFee;
 
+    mapping(address => bool) public allowList;
+
     event Sale(address from, address to, uint256 value);
 
     constructor(
@@ -1477,7 +1479,16 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
     }
 
     // public
-    function mint(uint256 _mintAmount) public payable {
+
+    function addToAllowList(address _minter) public onlyOwner {
+      allowList[_minter] = true;
+    }
+
+    function mint(uint256 _mintAmount) public isAllowed payable {
+
+        // msg.sender has to be added to the allow list by the owner
+        require(allowList[msg.sender] == true, "not allowed");
+
         require(
             block.timestamp >= timeDeployed + allowMintingAfter,
             "Minting now allowed yet"
@@ -1652,7 +1663,7 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
         baseURI = _newBaseURI;
     }
 
-    function setBaseExtension(string memory _newBaseExtension) 
+    function setBaseExtension(string memory _newBaseExtension)
         public
         onlyOwner
     {
