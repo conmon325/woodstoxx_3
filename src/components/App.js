@@ -130,8 +130,9 @@ function App() {
 			setIsMinting(true)
 			setIsError(false)
 
-			await rowdyGoat.methods.mint(1).send({ from: account, value: 100000000000000000 })
+			await rowdyGoat.methods.mint(1).send({ from: account, value: 1000000000000000 })
 				.on('confirmation', async () => {
+
 					const maxSupply = await rowdyGoat.methods.maxSupply().call()
 					const totalSupply = await rowdyGoat.methods.totalSupply().call()
 					setSupplyAvailable(maxSupply - totalSupply)
@@ -188,7 +189,7 @@ function App() {
 						<Col md={5} lg={4} xl={5} xxl={4}>
 							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
 							<p className='text'>
-								Rowdy Goat Social Club offers access to premier social events within Philadelphia!
+								Rowdy Goat Social Club is a diverse community of people organizing social events across the city of Philadelphia.
 							</p>
 							<a href="#about" className='button mx-3'>Learn More!</a>
 						</Col>
@@ -210,8 +211,8 @@ function App() {
 									<h3>Mint your NFT in</h3>
 									{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
 									<ul>
-										<li>76 mintable goat NFTs granting access to an active social scene</li>
-										<li>Free minting on Polygon mainnet</li>
+										<li>Access to a private Discord server where members coordinate events</li>
+										<li>Free minting on Ethereum mainnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
 									</ul>
 

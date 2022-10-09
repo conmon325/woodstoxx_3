@@ -1,18 +1,5 @@
 // SPDX-License-Identifier: MIT
 
-// Amended by HashLips
-/**
-    !Disclaimer!
-    These contracts have been used to create tutorials,
-    and was created for the purpose to teach people
-    how to create smart contracts on the blockchain.
-    please review this code on your own before using any of
-    the following code for production.
-    HashLips will not be liable in any way if for the use 
-    of the code. That being said, the code has been tested 
-    to the best of the developers' knowledge to work as intended.
-*/
-
 // File: @openzeppelin/contracts/utils/introspection/IERC165.sol
 pragma solidity ^0.8.0;
 
@@ -1430,7 +1417,7 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
 
     string baseURI;
     string public baseExtension = ".json";
-    uint256 public cost = 0.1 ether;
+    uint256 public cost;
     uint256 public maxSupply;
     uint256 public maxMintAmount = 1;
     uint256 public timeDeployed;
@@ -1449,7 +1436,7 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
     constructor(
         string memory _name,
         string memory _symbol,
-        // uint256 _cost,
+        uint256 _cost,
         uint256 _maxSupply,
         uint256 _allowMintingOn,
         string memory _initBaseURI,
@@ -1462,7 +1449,7 @@ contract RowdyGoat is ERC721Enumerable, Ownable {
             allowMintingAfter = _allowMintingOn - block.timestamp;
         }
 
-        // cost = _cost;
+        cost = _cost;
         maxSupply = _maxSupply;
         timeDeployed = block.timestamp;
 

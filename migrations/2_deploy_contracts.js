@@ -10,7 +10,7 @@ module.exports = async function (deployer) {
         RowdyGoat,
         process.env.PROJECT_NAME,
         process.env.PROJECT_SYMBOL,
-        // process.env.MINT_COST,
+        process.env.MINT_COST,
         process.env.MAX_SUPPLY,
         NFT_MINT_DATE,
         IPFS_IMAGE_METADATA_URI,
