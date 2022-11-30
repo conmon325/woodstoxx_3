@@ -1,7 +1,7 @@
 /* Styles go here */
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Rubik:wght@300;400;700&display=swap');
 
-:root {
+:root { 
     --clr-primary: #030303;
     --clr-secondary: #1E1E1E;
     --clr-text-light: #F2ECFF;

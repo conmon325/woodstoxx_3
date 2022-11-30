@@ -130,7 +130,7 @@ function App() {
 			setIsMinting(true)
 			setIsError(false)
 
-			await rowdyGoat.methods.mint(1).send({ from: account, value: 1000000000000000 })
+			await rowdyGoat.methods.mint(1).send({ from: account, value: 0 })
 				.on('confirmation', async () => {
 
 					const maxSupply = await rowdyGoat.methods.maxSupply().call()
