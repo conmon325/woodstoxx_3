@@ -37,6 +37,16 @@ module.exports = {
 				)
 			},
 			network_id: 137
+		},
+
+		mainnet: {
+			provider: function () {
+				return new HDWalletProvider(
+					[process.env.DEPLOYER_PRIVATE_KEY],
+					`wss://mainnet.infura.io/ws/v3/${process.env.INFURA_API_KEY}`
+				)
+			},
+			network_id: 1
 		}
 	},
 
