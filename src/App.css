@@ -39,8 +39,8 @@ nav {
 }
 
 main {
-    width: 75%;
-    margin-top: 20vh;
+    width: 85%;
+    margin-top: 14vh;
     scroll-snap-type: y mandatory;
 
     /* padding: 3em 1em; */
@@ -62,7 +62,7 @@ main {
 h1 {
     font-family: "Gochi Hand";
     font-weight: 700;
-    font-size: clamp(3rem, 10vw, 10rem);
+    font-size: clamp(4rem, 10vw, 10rem);
     transform: rotate(-4deg);
     padding-left: .8em;
 }
@@ -80,10 +80,10 @@ h3 {
 
 .sub-header {
     font-family: "Gochi Hand";
-    font-weight: 700;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 500;
+    font-size: clamp(1.35rem, 5vw, 4rem);
     transform: rotate(-4deg) translateX(2.5em) translateY(-0.5em);
-    padding-left: .8em;
+    padding-left: 0em;
 }
 
 .countdown {
@@ -93,9 +93,9 @@ h3 {
 }
 
 .text, ul {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    font-weight: 300;
-    padding: 1.15em;
+    font-size: clamp(1.2rem, 2vw, 1.15rem);
+    font-weight: 400;
+    padding: .85em;
 }
 
 /* LINK / BUTTON STYLES */
@@ -162,7 +162,7 @@ a:hover {
 }
 
 .philly {
-    width: 250px;
+    width: 320px;
     height: auto;
 }
 

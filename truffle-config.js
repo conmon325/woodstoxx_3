@@ -46,7 +46,8 @@ module.exports = {
 					`wss://mainnet.infura.io/ws/v3/${process.env.INFURA_API_KEY}`
 				)
 			},
-			network_id: 1
+			network_id: 1,
+			gasPrice: 17000000000
 		}
 	},
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react' 
 import { Row, Col, Spinner } from 'react-bootstrap'
 import Countdown from 'react-countdown'
-import Web3 from 'web3'
+import Web3 from 'web3' 
 
 // Import Images + CSS
 import twitter from '../images/socials/twitter.svg'
@@ -173,7 +173,7 @@ function App() {
 					<Row className='header my-3 p-3 mb-0 pb-0'>
 						<Col xs={12} md={12} lg={8} xxl={8}>
 							<h1>ROWDY GOATS</h1>
-							<p className='sub-header'>Available on 10 / 27 / 22</p>
+							<p className='sub-header'>Available on 12 / 25 / 22</p>
 						</Col>
 						
 					</Row>
