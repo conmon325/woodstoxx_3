@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Rubik:wght@300;400;700&display=swap');
 
 :root { 
-    --clr-primary: #030303;
+    --clr-primary: #156e2f;
     --clr-secondary: #1E1E1E;
     --clr-text-light: #F2ECFF;
     --clr-text-dark: #030303;
-    --clr-button-bg-1: #3586C6;
-    --clr-button-bg-2: #44E6FF;
+    --clr-button-bg-1: #0af04f;
+    --clr-button-bg-2: #f0f2f1;
     --clr-button-bg-3: #FF7F50;
 }
 
@@ -88,8 +88,8 @@ h3 {
 
 .countdown {
     font-family: "Rubik";
-    font-weight: 700;
-    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 300;
+    font-size: clamp(1rem, 4vw, 4rem);
 }
 
 .text, ul {
@@ -163,6 +163,26 @@ a:hover {
 
 .philly {
     width: 320px;
+    height: auto;
+}
+
+.woodstoxx {
+    width: 550px;
+    height: auto;
+}
+
+.crowd {
+    width: 825px;
+    height: auto;
+}
+
+.concert {
+    width: 400px;
+    height: auto;
+}
+
+.band {
+    width: 325px;
     height: auto;
 }
 

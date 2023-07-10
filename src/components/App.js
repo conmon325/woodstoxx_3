@@ -9,8 +9,12 @@ import instagram from '../images/socials/instagram.svg'
 import opensea from '../images/socials/opensea.svg'
 import showcase from '../images/showcase.png'
 import '../App.css'
-import logo from '../images/logo.png'
+import logo from '../images/logo_w.png'
 import philly from '../images/philly.png'
+import woodstoxx from '../images/woodstoxx_1.png'
+import crowd from '../images/crowd.jpeg'
+import concert from '../images/concert.png'
+import band from '../images/band.png'
 
 // Import Components
 import Navbar from './Navbar'
@@ -171,9 +175,12 @@ function App() {
 				<section id='welcome' className='welcome'>
 
 					<Row className='header my-3 p-3 mb-0 pb-0'>
-						<Col xs={12} md={12} lg={8} xxl={8}>
-							<h1>ROWDY GOATS</h1>
-							<p className='sub-header'>Available on 12 / 25 / 22</p>
+						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
+							<img
+								src={woodstoxx}
+								alt="RGSC"
+								className='woodstoxx'
+							/>
 						</Col>
 						
 					</Row>
@@ -181,15 +188,29 @@ function App() {
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
 							<img
-								src={philly}
+								src={crowd}
 								alt="RGSC"
-								className='philly'
+								className='crowd'
 							/>
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
-							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
 							<p className='text'>
-								Rowdy Goat Social Club is a diverse community of people organizing social events across the city of Philadelphia.
+								Woodstoxx understands the immense potential that digital assets offer to artists, revolutionizing the way they create, monetize, and engage with their audience.
+							</p>
+						</Col>
+					</Row>
+
+					<Row className='flex m-3'>
+						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
+							<img
+								src={concert}
+								alt="RGSC"
+								className='concert'
+							/>
+						</Col>
+						<Col md={5} lg={4} xl={5} xxl={4}>
+							<p className='text'>
+								We aim to help artists seeking to embrace crypto, providing comprehensive guidance, innovative strategies, and practical solutions tailored to their unique creative journeys. Through our expertise, we strive to demystify the complexities of the crypto landscape and enable artists to harness its transformative power with confidence.
 							</p>
 							<a href="#about" className='button mx-3'>Learn More!</a>
 						</Col>
@@ -199,16 +220,16 @@ function App() {
 				<section id='about' className='about'>
 
 					<Row className='flex m-3'>
-						<h2 className='text-center p-3'>About the Collection</h2>
+						<h2 className='text-center p-3'>This could be your band:</h2>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
-							<img src={showcase} alt="Rittenhouse Goat" className='showcase' />
+							<img src={band} alt="Rittenhouse Goat" className='band' />
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
 							{isError ? (
 								<p>{message}</p>
 							) : (
 								<div>
-									<h3>Mint your NFT in</h3>
+									<h3>Mint your Band Token in</h3>
 									{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
 									<ul>
 										<li>Access to a private Discord server where members coordinate events</li>
